@@ -66,16 +66,26 @@ public class CircleManager {
      * have a circumference less than or equal to "maxCircumference" 
      * */
     public ArrayList<Circle2d> getSmallCircles (double maxCircumference) {
-        System.out.println("TODO!");
-        return null;
+        ArrayList<Circle2d> smallCircles = new ArrayList<>();
+        for (int i = 0; i < circleList.size(); i++) {
+            if (circleList.get(i).getCircumference() <= maxCircumference) {
+                smallCircles.add(circleList.get(i));
+            }
+        }
+        return smallCircles;
     }
 
     /*
      * Returns the largest radius in the list of circles.  
      */
     public double largestRadius() {
-        System.out.println("TODO!");
-        return -1;
+        double before = 0;
+        for (int i = 0; i < circleList.size(); i++) {
+            if (circleList.get(i).getRadius() >= before) {
+                before = circleList.get(i).getRadius();
+            }
+        }
+        return before;
     }
 
 
@@ -83,8 +93,11 @@ public class CircleManager {
      * Returns the sum of the area of the list of circles.
      */
     public double getTotalAreaOfAllCircles () {
-        System.out.println("TODO!");
-        return -1;
+        double total = 0;
+        for (int i = 0; i < circleList.size(); i++) {
+            total += circleList.get(i).getArea();
+        }
+        return total;
     }
     
     /*
@@ -94,7 +107,8 @@ public class CircleManager {
      * Adds the new circle to the list. 
      */
     public void addRandomCircle(double maxX, double maxY, double maxR) {
-        System.out.println("TODO!");
+        Circle2d random = new Circle2d(Math.random() * maxX, Math.random() * maxY, Math.random() * maxR);
+        circleList.add(random);
     }
 
     /*
@@ -103,8 +117,13 @@ public class CircleManager {
      */
     public int removeCirclesWithXCoordinateInRange (double from, double to)
     {
-        System.out.println("TODO!");
-        return -1;
+        int removed = 0;
+        for (int i = 0; i < circleList.size(); i++) {
+            if (from <= circleList.get(i).getX() && circleList.get(i).getX() <= to) {
+                removed++;
+            }
+        }
+        return removed;
     }
 
     /** 
@@ -117,8 +136,19 @@ public class CircleManager {
      * (You can assume that a precondition is true.)
      */
     public ArrayList<Circle2d> nearestCircles() {
-        System.out.println("TODO!");
-        return null;
+        ArrayList<Circle2d> nearCircles = new ArrayList<>();
+        nearCircles.add(0, null);
+        nearCircles.add(1, null);
+        double dist = 9999;
+        for (int i = 0; i < circleList.size(); i++) {
+            for (int j = 0; j < circleList.size(); j++) {
+                if (circleList.get(i).distance(circleList.get(j)) < dist && circleList.get(i) != circleList.get(j)) {
+                    nearCircles.set(0, circleList.get(i));
+                    nearCircles.set(1, circleList.get(j));
+                }
+            }
+        }
+        return nearCircles;
     }
 
 }
