@@ -1,0 +1,50 @@
+West Virginia,Charleston:West
+Arkansas,Little Rock:South
+New York,Albany:Northeast
+Idaho,Boise:West
+Utah,Salt Lake City:West
+Massachusetts,Boston:Northeast
+Wisconsin,Madison:Midwest
+Texas,Austin:South
+Pennsylvania,Harrisburg:Northeast
+Illinois,Springfield:Midwest
+Connecticut,Hartford:Northeast
+New Jersey,Trenton:Northeast
+Mississippi,Jackson:South
+New Hampshire,Concord:Northeast
+Delaware,Dover:South
+Vermont,Montpelier:Northeast
+Rhode Island,Providence:Northeast
+North Dakota,Bismarck:Midwest
+Kentucky,Frankfort:South
+Georgia,Atlanta:South
+Virginia,Richmond:South
+North Carolina,Raleigh:South
+Missouri,Jefferson City:Midwest
+Minnesota,St. Paul:Midwest
+Oklahoma,Oklahoma City:West
+California,Sacramento:West
+Alaska,Juneau:Pacific
+Hawaii,Honolulu:Pacific
+Alabama,Montgomery:South
+New Mexico,Santa Fe:West
+Tennessee,Nashville:South
+Montana,Helena:West
+Wyoming,Cheyenne:West
+Ohio,Columbus:Midwest
+Florida,Tallahassee:South
+Iowa,Des Moines:Midwest
+Indiana,Indianapolis:Midwest
+Michigan,Lansing:Midwest
+Nebraska,Lincoln:West
+Oregon,Salem:West
+Washington,Olympia:West
+Kansas,Topeka:Midwest
+Colorado,Denver:West
+South Carolina,Columbia:South
+Maryland,Annapolis:South
+Nevada,Carson City:West
+Louisiana,Baton Rouge:South
+Maine,Augusta:Northeast
+Arizona,Phoenix:West
+South Dakota,Pierre:Midwest
