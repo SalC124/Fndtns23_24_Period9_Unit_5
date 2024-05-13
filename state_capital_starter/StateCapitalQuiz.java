@@ -48,24 +48,22 @@ public class StateCapitalQuiz {
 
             System.out.println("What is the capital of " + statename + "?");
             response = in.nextLine();
-            guesses++;
-
-            while (!response.equals(capital) && !response.equals("QUIT")) {
-                System.out.println("Incorrect! " + capital + " is the correct answer.\n");
+            
+            if (!response.equals("QUIT")) {
                 guesses++;
-
-                if (!wrongStates.contains(states.get(randQuestion))) {
+                if (response.equals(capital)) {
+                    correct++;
+                    states.remove(randQuestion);
+                    System.out.println("Correct!");
+                } else {
+                    System.out.println("Incorrect! " + capital + " is the correct answer.\n");
                     wrongStates.add(states.get(randQuestion));
                 }
-                  
-                System.out.println("What is the capital of " + statename + "?");
-                response = in.nextLine();
             }
-            states.remove(randQuestion);
-            correct++;
         }
+        
         if (response.equals("QUIT")) {
-            System.out.println("You got " + (correct - 1) + " state(s) correct in " + (guesses - 1) + " guess(es).\n\n");
+            System.out.println("You got " + (correct) + " state(s) correct in " + (guesses) + " guess(es).\n\n");
             if (guesses > correct) {
                 System.out.println("You needed more than one guess for each of the following states:");
                 for (int i = 0; i < wrongStates.size(); i++) {
